@@ -1,4 +1,4 @@
-# Stastical-Language-Modelling-using-N-gram
+# Statistical-Language-Modelling-using-N-gram
 Using Natural Language Processing, the model predicts the most
 probable next word and outputs the correctness of an input English
 sentence.To achieve the optimum accuracy, a largereliable dataset
