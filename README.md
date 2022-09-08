@@ -1,16 +1,26 @@
-# Statistical-Language-Modelling-using-N-gram
-      Using Natural Language Processing, the model predicts the most
-      probable next word and outputs the correctness of an input English
-      sentence.To achieve the optimum accuracy, a largereliable dataset
-      or corpus is extracted from Wikipedia, preprocessed, and then
-      analyzed before using it to train the model. 
+Check out the Space at https://huggingface.co/spaces/Shruhrid/Next_Word_Prediction
 
-      Analyzing the dataset and its visualization can be an insightful technique to understand
-      the corpus before using it for the model's training. Choosing an appropriate model for any problem is a crucial step. In our case,
-      using a trigram model to train the data proved to be the best
-      trade-of .This trained model is finally used in the code to predict the
-      next word and find the perplexity of a given sentence based on the
-      trigram model
+# Probabilistic approach to Next Word Prediction #
+The task of predicting the next word using an n-gram model is equivalent to the
+probability of getting a specific word at the nth place given the previous n-1 words. The
+probability of the same is given by the Bayesformula,P(w |w₁,.....,w ₋₁)
 
-Link to the Hugging Face interface:
-https://huggingface.co/spaces/Shruhrid/Next_Word_Prediction
+# Key Aspects #
+
+### Laplace Smoothing ###
+Laplace smoothing is a technique that helps when the dataset remains limited for a plrobabilistic approach. Essentially it helps to avoid the problem of zero probability.
+For a bigram approach:
+
+![image](https://user-images.githubusercontent.com/76119205/175379976-33345bac-83fc-42dd-bed0-8090ebbe1296.png)
+
+| Keyword  | Meaning |
+| ------------- | ------------- |
+| P*   | Probability of the Laplace Smoothed N-grams  |
+| Wi  | i’th word |
+| 𝑐(Wi,Wi-1)| count of word sequence Wi-1,Wi) |
+|V | total number of words in vocabulary |
+
+
+### Perplexity ###
+
+Being confused ain't as bad as you may think! Perplexity is a measure of how certain the model was while making the predictions. It is the inverse of the probability of predicting the test set normalized by the number of words.
